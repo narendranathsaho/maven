@@ -10,8 +10,7 @@ node('master')
     }
     stage('ContinuousDeployment_master')
     {
-     deploy adapters: [tomcat9(credentialsId: '4235a02a-e782-4511-abe6-f35d87df8c3d', path: '', url: 'http://172.31.4.30:8080')], contextPath: 'qademo', war: '**/*.war'   
-        
+     deploy adapters: [tomcat9(credentialsId: '4235a02a-e782-4511-abe6-f35d87df8c3d', path: '', url: 'http://172.31.4.30:8080')], contextPath: 'qademo', war: '**/*.war'           
     }
     stage('ContinuousTesting_master')
     {
